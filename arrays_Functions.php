@@ -15,3 +15,14 @@ echo "<H3>Part I</H3>";
 //1.Define an array
 $animals = array("panda", "alpaca", "boa");
 
+//2.Sort array and print it
+function sortArray($animals)
+{
+    sort($animals); //sort alphabetically
+    foreach ($animals as $key => $value)  //foreach to get key and value
+    {
+        echo "$value ";
+    }
+    echo "<br>";
+}
+sortArray($animals);
