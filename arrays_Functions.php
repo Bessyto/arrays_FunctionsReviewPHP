@@ -26,3 +26,36 @@ function sortArray($animals)
     echo "<br>";
 }
 sortArray($animals);
+
+//3.Case-insensitive function that accept a String parameter and add it to the array if it's not there
+function addElements($animals, $animal)
+{
+    //variables
+    global $animals;   //to access the array
+    $counter='';
+    $lowerAnimal =strtolower($animal);  //to lower case
+
+    //if the animal to add is already in the array, counter will increase the value
+    for($i = 0; $i < count($animals); $i++)
+    {
+        if($animals[$i] == $lowerAnimal)
+        {
+            $counter++;
+        }
+    }
+
+    echo "Adding $animal ..... <br>";
+
+    //if the array doesn't contain the animal, this will be added to the array
+    if($counter == 0)
+    {
+        array_push($animals,$lowerAnimal);
+    }
+
+    //calls the function that sorts and print the array
+    sortArray($animals);
+
+}
+
+addElements($animals,"goat");
+addElements($animals, "Boa");
