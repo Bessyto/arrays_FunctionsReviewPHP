@@ -59,6 +59,8 @@ function addElements($animals, $animal)
 
 addElements($animals,"goat");
 addElements($animals, "Boa");
+addElements($animals, "raBBit");
+addElements($animals, "caT");
 
 //PART II---------------------------------------------------------------------------------------------------------------
 echo "<h3>Part II</h3>";
