@@ -59,3 +59,19 @@ function addElements($animals, $animal)
 
 addElements($animals,"goat");
 addElements($animals, "Boa");
+
+//PART II---------------------------------------------------------------------------------------------------------------
+echo "<h3>Part II</h3>";
+
+//Part1-Define an associative array containing key-value pairs for various cupcake flavors
+$flavors = array("grasshopper" => "The Grasshopper", "maple" => "Whiskey Maple Bacon",
+    "carrot" => "Carrot Walnut", "caramel" => "Salted Caramel Cupcake",
+    "velvet" => "Red Velvet", "lemon" => "Lemon Drop", "tiramisu" => "Tiramisu");
+
+//Part2- Display cupcakes options as a set of checkboxes
+foreach ($flavors as $key => $value)
+{
+    echo "<input type='checkbox' name='flavors[]' value='$key'> $value  <br>";
+}
+
+?>
